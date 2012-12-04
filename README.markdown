@@ -1,3 +1,6 @@
+# Ruby on Rails Tutorial: Пример приложениия 
+
+Это пример приложения для railstutorial.org
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create
