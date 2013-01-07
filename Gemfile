@@ -39,6 +39,7 @@ gem 'jquery-rails'
 # gem 'debugger'
 
 gem 'sqlite3', :group => [:development, :test]
+gem 'gravatar_image_tag', '1.0.0.pre2'
 group :production do
  gem 'thin' 
  gem 'pg'
