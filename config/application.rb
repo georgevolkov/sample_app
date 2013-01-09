@@ -1,6 +1,7 @@
 require File.expand_path('../boot', __FILE__)
 
 # Pick the frameworks you want:
+require "rails/all"
 require "active_record/railtie"
 require "action_controller/railtie"
 require "action_mailer/railtie"
@@ -10,7 +11,7 @@ require "sprockets/railtie"
 
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
-  Bundler.require(*Rails.groups(:assets => %w(development test)))
+  Bundler.require(:default, Rails.env) if defined?(Bundler)
   # If you want your assets lazily compiled in production, use this line
   # Bundler.require(:default, :assets, Rails.env)
 end
@@ -64,5 +65,6 @@ module SampleApp
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+    config.filter_parameters += [:password]
   end
 end
